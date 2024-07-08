@@ -22,11 +22,11 @@ void solve() {
 	//ans = sub + seq - matches
 
 	int matches = 0;
-	for(int size=b.length(); size>1; size--) {
+	for(int size=b.length(); size>0; size--) {
 		for(int i=0; i<b.length() - size + 1; i++) {
 			string smallerString = b.substr(i, size);
 
-			cout << smallerString << "\n";
+			// cout << smallerString << "\n";
 
 			if(substringExist(smallerString, a)) {
 				matches = max(matches, size);
