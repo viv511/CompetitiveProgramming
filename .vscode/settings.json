@@ -4,6 +4,7 @@
         "string": "cpp",
         "vector": "cpp",
         "c_route": "c",
-        "tuple": "cpp"
+        "tuple": "cpp",
+        "ios": "cpp"
     }
 }
