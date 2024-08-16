@@ -21,37 +21,20 @@ void solve() {
     }
     sort(v.begin(), v.end());
 
-    int matchedElements = 1;
-    int indexToMatch = 0;
-    int maxElement = 0;
+    int indexToChange = v.size()-2;
+    while(k != 0 && indexToChange >= 0) {
+        int diff = abs(v[indexToChange+1]-v[indexToChange]);
+        int val = min(diff, k);
 
-    if(n % 2 == 0) {
-        indexToMatch = v.size()-2;
-        maxElement = v[v.size()-1];
-    }
-    else {
-        indexToMatch = v.size()-3;
-        maxElement = v[v.size()-2];
+        v[indexToChange] += val;
+        k -= val;
+        indexToChange-=2;
     }
 
-    while(k != 0 && indexToMatch >= 0) {
-        sort(v.begin(), v.end());
-        
-        if(v[indexToMatch] == maxElement) {
-            indexToMatch--;
-        }
-        else {
-            v[indexToMatch]++;
-            k--;
-        }
-
-    }
-
-    sort(v.begin(), v.end());
-
+    
     long long ans = 0;
-    long long turn = 0;
-    for(int i = v.size()-1; i >= 0; i--) {
+    int turn = 0;
+    for(int i=v.size()-1; i>=0; i--) {
         if(turn == 0) {
             ans += v[i];
             turn = 1;
@@ -61,7 +44,6 @@ void solve() {
             turn = 0;
         }
     }
-
     cout << ans << "\n";
 }
 
