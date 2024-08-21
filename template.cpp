@@ -7,6 +7,21 @@
 #include <set>
 #include <queue>
 
+typedef long long ll;
+typedef unsigned long long ull;
+using namespace std;
+ 
+typedef vector<int> vi;
+typedef pair<int, int> pi;
+#define all(v) v.begin(), v.end()
+#define mp make_pair
+#define pb push_back
+#define fi first
+#define se second
+#define ins insert
+#define sq(x) ((x) * (x))
+#define sz(x) (int)(x.size())
+
 using namespace std;
 
 void solve() {
