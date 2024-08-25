@@ -1,22 +1,9 @@
 #include <iostream>
-#include <string>
-#include <vector>
-#include <algorithm>
-#include <cmath>
-#include <map>
-#include <set>
-#include <queue>
-
 using namespace std;
 
 void solve() {
 	int n; cin >> n;
-	int k = n;
-	while(n != 0) {
-		k--;
-		n = n & n-1;
-	}
-	cout << k << "\n";
+	cout << (long long)(pow(2, (32-__builtin_clz(n))-1)-1) << "\n";
 }
 
 int main() {
