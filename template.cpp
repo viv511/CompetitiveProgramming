@@ -21,6 +21,7 @@ typedef pair<int, int> pi;
 #define ins insert
 #define sq(x) ((x) * (x))
 #define sz(x) (int)(x.size())
+#define print(answer) cout << answer << "\n"
 
 using namespace std;
 
