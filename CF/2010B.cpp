@@ -26,26 +26,18 @@ typedef pair<int, int> pi;
 using namespace std;
 
 void solve() {
-    int n; cin >> n;
-    int ans = 0;
-    for(int i=0; i<n; i++) {
-        int a; cin >> a;
-        if(i%2 == 0) {
-            ans += a;
-        }
-        else {
-            ans -= a;
-        }
-    }
-
-    cout << ans << "\n";
+    int ans = 6;
+    int a, b; cin >> a >> b;
+    ans -= a;
+    ans -= b;
+    cout << ans;
 }
 
 int main() {
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
 
-	int T; cin >> T;
+	int T = 1;
 	while(T--) {
 		solve();
 	}
