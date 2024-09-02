@@ -22,7 +22,7 @@ typedef pair<int, int> pi;
 #define sq(x) ((x) * (x))
 #define sz(x) (int)(x.size())
 #define print(answer) cout << answer << "\n"
-#define MOD 1e9+7
+#define MOD 1000000007
 
 using namespace std;
 
@@ -30,10 +30,20 @@ using namespace std;
 //choice counter is just find # routes
 //DP too slow, use binary search
 
+vi LIS;
+
 void solve() {
     ll n; cin >> n;
-   
     int choice; cin >> choice;
+
+    if(n == 1) {
+        int a; cin >> a;
+        print(a);
+        if(choice == 1) {
+            print(1);
+        }
+        return;
+    }
 
     vector<ll> v(n);
     for(int i=0; i<n; i++) {
@@ -56,6 +66,21 @@ void solve() {
     }
 
     print(ans);
+
+    if(choice == 1) {
+        LIS.resize(n, 1);
+
+        for(int i = n-1; i >= 0; i--) {
+            for(int j = i+1; j < n; j++) {
+                if(v[i] < v[j]) {
+                    LIS[i] = max(LIS[i], LIS[j] + 1);
+                }
+            }
+        }
+
+        long long count = LIS[1] % MOD;
+        print(count);
+    }
 }   
 
 int main() {
