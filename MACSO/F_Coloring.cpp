@@ -117,7 +117,12 @@ void solve() {
         }
     }
     else {
-        if(n > m) {
+        if(n == 10 && m && 10) {
+            //welp
+            //u need to find 10x10 square lattice 2 colored such that no rectangles with same-colored vertices exist??
+
+        }
+        else if(n > m) {
             for(int i = 0; i < n; i++) {
                 for(int j = 0; j < m; j++) {
                     cout << threeTall[i][j] << " ";
