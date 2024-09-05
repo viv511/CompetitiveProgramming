@@ -68,18 +68,42 @@ void solve() {
     print(ans);
 
     if(choice == 1) {
-        LIS.resize(n, 1);
+        //DP!
+        int finalSize = v.size();
+        ll maxVal = 0;
+        ll numLens = 0;
 
-        for(int i = n-1; i >= 0; i--) {
-            for(int j = i+1; j < n; j++) {
-                if(v[i] < v[j]) {
-                    LIS[i] = max(LIS[i], LIS[j] + 1);
+        vi endingSeq(n, 1);
+        vi count(n, 1);
+
+        for(int i=0; i<n; i++) {
+            for(int j=0; j<i; j++) {
+                if(v[j] < v[i]) {
+                    if(endingSeq[j] + 1 > endingSeq[i]) {
+                        endingSeq[i] = endingSeq[j] + 1;
+                        count[i] = count[j];
+                    }
+                    else if(endingSeq[j] + 1 == endingSeq[i]) {
+                        count[i] = (count[i] + count[j]) % MOD;
+                    }
                 }
             }
+
+            //Find the max ending sequence
+            if(maxVal < endingSeq[i]) {
+                maxVal = endingSeq[i];
+                numLens = count[i];
+            }
+            else if(maxVal == endingSeq[i]) {
+                numLens = (numLens + count[i]) % MOD;
+            }
+
         }
 
-        long long count = LIS[1] % MOD;
-        print(count);
+        //Loop through the ending sequence and count array to find the number of sequences
+        //Add it all up to find ans
+
+        print(numLens);
     }
 }   
 
