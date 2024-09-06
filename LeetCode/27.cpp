@@ -1,3 +1,5 @@
+//https://leetcode.com/problems/remove-element/description/
+
 #include <iostream>
 #include <vector>
 #include <string>
