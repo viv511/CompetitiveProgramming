@@ -22,7 +22,6 @@ typedef pair<int, int> pi;
 #define sz(x) (int)(x.size())
 #define yap(answer) cout << answer << "\n"
 
-using namespace std;
 
 void solve() {
 	
