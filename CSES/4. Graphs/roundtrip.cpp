@@ -13,7 +13,7 @@ using namespace std;
 int n, m;
 vector<int> parents;
 vector<bool> visited;
-vector<vector<int>> g;
+vector< vector<int> > g;
  
 int sv, ev;
  
