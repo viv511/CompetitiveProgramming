@@ -22,11 +22,7 @@ int main() {
     }
 
     int maxLength = 0;
-
-    // for(auto a : v) {
-    //  cout << a << " ";
-    // }
-
+    
     vector<int> left(7, 1e7);
     vector<int> right(7, -1);
 

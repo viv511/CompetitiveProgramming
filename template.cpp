@@ -7,12 +7,13 @@
 #include <set>
 #include <queue>
 
-typedef long long ll;
-typedef unsigned long long ull;
 using namespace std;
- 
+
+typedef long long ll;
+typedef unsigned long long ull; 
 typedef vector<int> vi;
 typedef pair<int, int> pi;
+
 #define all(v) v.begin(), v.end()
 #define mp make_pair
 #define pb push_back
@@ -21,7 +22,8 @@ typedef pair<int, int> pi;
 #define ins insert
 #define sz(x) (int)(x.size())
 #define yap(answer) cout << answer << "\n"
-
+#define FOR(i, a, b) for (int i=a; i<(b); i++)
+#define F0R(i, a) FOR(i, 0, a)
 
 void solve() {
 	
