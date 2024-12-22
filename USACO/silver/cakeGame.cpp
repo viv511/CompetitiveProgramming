@@ -25,8 +25,9 @@ void solve() {
 
 	ll turnCount = (n / 2) - 1;
 	ll elsieBestScore = -1;
+
 	F0R(i, turnCount+1) {
-		ll leftSum = prefix[i+1]-prefix[1];
+		ll leftSum = prefix[i]-prefix[0];
 		ll rightSum = prefix[n] - prefix[n-(turnCount-i)];
 
 		elsieBestScore = max(elsieBestScore, leftSum + rightSum);
