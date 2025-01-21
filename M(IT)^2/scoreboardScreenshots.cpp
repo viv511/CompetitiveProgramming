@@ -47,7 +47,7 @@ bool sorter(const pair<int, vector<int>> a, const pair<int, vector<int>> b) {
 void solve() {
 	int n, k;
 	cin >> n >> k;
-	vector<pair<int, vector<int>>> screenshots;
+	vector< pair < int, vector <int> > > screenshots;
 	for (int i = 0; i < n; i++) {
 		vector<int> teams((int)k);
 		for (int j = 0; j < k; j++) {
