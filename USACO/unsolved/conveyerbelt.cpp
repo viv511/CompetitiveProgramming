@@ -109,6 +109,5 @@ int main() {
 
 
 		//Check all remaining cells to see if they have a "false" neighbor
-
 	}
 }
