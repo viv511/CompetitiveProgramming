@@ -30,7 +30,7 @@ int main() {
         int num = v[i];
         m[num]++;
 
-        if(m[num] == 2) { //two occurances --> search for distinct nums
+        if(m[num] == 2) { 
             ans += distinct[i-1];
             if(freq[num] > 2) {
                 ans--;
