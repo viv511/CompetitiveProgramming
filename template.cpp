@@ -16,9 +16,9 @@ typedef pair<int, int> pi;
 
 #define all(v) v.begin(), v.end()
 #define mp make_pair
-#define pb push_back
 #define fi first
 #define se second
+#define pb push_back
 #define ins insert
 #define sz(x) (int)(x.size())
 #define yap(answer) cout << answer << "\n"
