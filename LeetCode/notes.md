@@ -47,10 +47,4 @@ You need to write code that is going to be effective and well written, not just 
 
 **THINK BEFORE YOU DO ANYTHING**
 
-## SAND Techniques (?)
-- **S**preadsheet Approach
-- **A**nki Flashcards
-- **N**otion
-- **D**o more problems !!
-
 Honestly speaking, I'll be using this repository for all of my competitive programming / DSA learning. I'll be updating this repository with all the problems I solve, and the concepts I learn. I'll also be updating my notes here, so that I can refer to them whenever I want.
