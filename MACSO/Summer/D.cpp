@@ -10,7 +10,20 @@ typedef long long ll;
 
 void solve() {
     ll n; cin >> n;
-   
+    vector<ll> shells(n);
+
+    for(ll i = 0; i < n; i++) {
+        ll x; cin >> x;
+        shells[i] = __builtin_popcount(x);
+    }
+
+    ll ans = 0;
+    
+    for(ll l = 0; l < n; l++) {
+        for(ll r = l+1; r < n; r++) {
+            
+        }
+    }
 }
 
 int main() {
