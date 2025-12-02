@@ -23,7 +23,10 @@ int minCostConnectPoints(vector<vector<int>>& points) {
 
     while(visitedCount < n) {
         //will run til non visited edge found
-        auto [cost, i] = pq.top();
+        auto a = pq.top();
+        int cost = a.first;
+        int i = a.second;
+        
         pq.pop();
         if(visited[i]) continue;
 
