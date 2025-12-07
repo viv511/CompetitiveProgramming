@@ -1,22 +1,20 @@
 #include <vector>
 #include <string>
 #include <queue>
-#include <algorithm>
-#include <iterator>
 using namespace std;
 
 vector<string> findRelativeRanks(vector<int>& score) {
-    priority_queue<int> q;
-    for(auto s : score) {
-        q.push(s);
+    priority_queue<pair<int, int>> pq;
+    for(int i = 0; i < score.size(); i++) {
+        pq.push({score[i], i});
     }
 
     vector<string> ans(score.size());
     int i = 1;
-    while(!q.empty()) {
-        int a = q.top();
-        auto it = std::find(score.begin(), score.end(), a);
-        int idx = std::distance(score.begin(), it);
+
+    while(!pq.empty()) {
+        auto [s, idx] = pq.top();
+        pq.pop(); 
 
         if(i == 1) {
             ans[idx] = "Gold Medal";
@@ -31,7 +29,6 @@ vector<string> findRelativeRanks(vector<int>& score) {
             ans[idx] = to_string(i);
         }
 
-        q.pop();
         i++;
     }
 
