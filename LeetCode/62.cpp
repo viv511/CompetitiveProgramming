@@ -1,6 +1,3 @@
-#include <vector>
-using namespace std;
-
 long long choose(int a, int b) {
     if (b > a - b) {
         b = a - b;
