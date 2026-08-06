@@ -24,6 +24,10 @@ typedef pair<int, int> pi;
 #define yap(answer) cout << answer << "\n"
 #define FOR(i, a, b) for (int i=a; i<(b); i++)
 #define F0R(i, a) FOR(i, 0, a)
+#define readVec(arr, n) {for (int i = 0; i < n; i++) cin >> arr[i];}
+
+const int INF = 1e9 + 1;
+const ll MOD = 1e9 + 7;
 
 void solve() {
 	
