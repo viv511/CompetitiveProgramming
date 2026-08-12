@@ -11,17 +11,21 @@ void dfs(vector<int>& n, int t, int start) {
     }
 
     for (int i = start; i < n.size(); i++) {
-        if(n[i] > t) break;
+        if (i > start && n[i] == n[i-1])
+            continue;
+        
+        if (n[i] > t)
+            break;
 
         path.push_back(n[i]);
 
-        dfs(n, t - n[i], i); //enable dups so we pass in i, otherwise i+1
+        dfs(n, t - n[i], i + 1);
 
         path.pop_back();
     }
 }
 
-vector<vector<int>> combinationSum(vector<int>& candidates, int target) {
+vector<vector<int>> combinationSum2(vector<int>& candidates, int target) {
     sort(candidates.begin(), candidates.end());
 
     ans.clear();
