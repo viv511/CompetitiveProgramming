@@ -3,7 +3,7 @@
 #include <unordered_map>
 using namespace std;
 
-string evaluate(string s, vector<vector<string>>& knowledge) {
+string evaluate(const string s, const vector<vector<string>>& knowledge) {
    std::unordered_map<std::string, std::string> lookup;
    lookup.reserve(knowledge.size());
 
@@ -12,7 +12,8 @@ string evaluate(string s, vector<vector<string>>& knowledge) {
       lookup[keyval[0]] = keyval[1];
    }
 
-   std::string ans = "";
+   std::string ans;
+   ans.reserve(s.size());
    std::string phrase = "";
    for (size_t i = 0; i < s.length(); i++) {
       if(s[i] == '(') {         
