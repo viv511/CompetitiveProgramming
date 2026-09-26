@@ -12,34 +12,26 @@ string evaluate(string s, vector<vector<string>>& knowledge) {
       lookup[keyval[0]] = keyval[1];
    }
 
-   bool active = false;
-   std::string phrase = "";
    std::string ans = "";
+   std::string phrase = "";
    for (size_t i = 0; i < s.length(); i++) {
-      if (active) {
-         if (s[i] == ')') {
-            active = false;
+      if(s[i] == '(') {         
+         // optimization: as soon as we find a "(" we can find the whole phrase
+         size_t closingParen = s.find(')', i);
+         phrase = s.substr(i + 1, closingParen - i - 1);
 
-            auto it = lookup.find(phrase);
-            if (it == lookup.end()) {
-               ans += "?";
-            }
-            else {
-               ans += it->second;
-            }
+         auto it = lookup.find(phrase);
+         if (it == lookup.end()) {
+            ans += "?";
          }
          else {
-            phrase += s[i];
+            ans += it->second;
          }
+
+         i = closingParen;
       }
       else {
-         if(s[i] == '(') {
-            active = true;
-            phrase = "";
-         }
-         else {
-            ans += s[i];
-         }
+         ans += s[i];
       }
    }
 
