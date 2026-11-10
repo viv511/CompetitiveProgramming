@@ -1,0 +1,14 @@
+ladder:
+https://earthshakira.github.io/a2oj-clientside/server/Ladders.html 
+
+unsovled:
+2000C
+2000D
+2000H
+2004D
+2034B
+2047A
+2051D
+2051E
+2047A
+2252B
