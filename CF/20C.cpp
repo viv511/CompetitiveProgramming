@@ -6,6 +6,8 @@
 
 using namespace std;
 
+#define ll long long
+
 int main() {
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
@@ -13,7 +15,7 @@ int main() {
 	int n, m;
     cin >> n >> m;
 
-    vector<vector<pair<long long, int>>> adj(n);
+    vector<vector<pair<ll, int>>> adj(n);
 
     for (int i = 0; i < m; i++) {
         int a, b, w;
@@ -28,10 +30,10 @@ int main() {
 
     // SSSP - undirected, positive edge weights
 
-    vector<long long> dist(n, LLONG_MAX);
+    vector<ll> dist(n, LLONG_MAX);
     vector<bool> done(n, false);
     vector<int> parent(n, -1);
-    priority_queue<pair<long long, int>, vector<pair<long long, int>>, greater<pair<long long, int>>> pq;
+    priority_queue<pair<ll, int>, vector<pair<ll, int>>, greater<pair<ll, int>>> pq;
 
     dist[0] = 0;
     pq.push({0, 0});
