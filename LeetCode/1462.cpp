@@ -1,10 +1,5 @@
 #include <vector>
-#include <climits>
 using namespace std;
-
-#define ll long long
-const ll INF = LLONG_MAX;
-const int MOD = 1e9 + 7;
 
 bool dfs(vector<vector<int>>& adj, vector<bool>& visited, int u, int target) {
     if (u == target) return true;

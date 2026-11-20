@@ -22,9 +22,11 @@ int findTheCity(int n, vector<vector<int>>& edges, int distanceThreshold) {
     for (int k = 0; k < n; k++) {
         for (int u = 0; u < n; u++) {
             if (dist[u][k] == INF) continue;
+            
             for (int v = 0; v < n; v++) {
                 if (dist[k][v] == INF) continue;
-                    dist[u][v] = min(dist[u][v], dist[u][k] + dist[k][v]);
+
+                dist[u][v] = min(dist[u][v], dist[u][k] + dist[k][v]);
             }
         }
     }
